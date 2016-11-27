@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="digits">#676d65</color>
-    <color name="othertop">#bdf4b2</color>
-    <color name="otherdown">#f9645e</color>
-    <color name="operation">#9ba399</color>
+    <color name="digits">#3aaa63</color>
+    <color name="othertop">#e59c00</color>
+    <color name="otherdown">#3aaa63</color>
+    <color name="operation">#28e0a6</color>
 </resources>

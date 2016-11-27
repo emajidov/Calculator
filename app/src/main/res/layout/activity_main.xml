@@ -22,15 +22,15 @@
             android:baselineAligned="false">
 
             <TextView
-                android:background="#edf5f7"
+                android:background="#ceedd9"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/display"
                 android:textSize="40sp"
                 android:textAlignment="textEnd"
-                android:textStyle="normal|bold"
                 android:layout_weight="1"
-                android:lines="3" />
+                android:lines="3"
+                android:textColor="@android:color/background_dark" />
 
         </LinearLayout>
 
@@ -54,11 +54,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:id="@+id/clear"
-                    android:textSize="20sp"
+                    android:textSize="30sp"
                     android:fontFamily="sans-serif"
-                    android:textStyle="normal|bold"
                     android:layout_weight="0.25"
-                    android:background="@color/othertop"/>
+                    android:background="@color/othertop"
+                    android:onClick="clear"/>
 
                 <Button
                     android:text="IN"
@@ -66,9 +66,9 @@
                     android:layout_height="match_parent"
                     android:id="@+id/in_button"
                     android:layout_weight="0.25"
-                    android:textSize="15sp"
-                    android:textStyle="normal|bold"
-                    android:background="@color/othertop"/>
+                    android:textSize="30sp"
+                    android:background="@color/othertop"
+                    android:onClick="in"/>
 
                 <Button
                     android:text="OUT"
@@ -76,20 +76,20 @@
                     android:layout_height="match_parent"
                     android:id="@+id/out_button"
                     android:layout_weight="0.25"
-                    android:textSize="15sp"
-                    android:textStyle="normal|bold"
+                    android:textSize="30sp"
                     android:textAllCaps="false"
-                    android:background="@color/othertop"/>
+                    android:background="@color/othertop"
+                    android:onClick="out"/>
 
                 <Button
-                    android:text="/"
+                    android:text="÷"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:id="@+id/divide"
                     android:textSize="30sp"
-                    android:textStyle="normal|bold"
                     android:layout_weight="0.25"
-                    android:background="@color/operation"/>
+                    android:background="@color/operation"
+                    android:onClick="sign"/>
 
             </LinearLayout>
 
@@ -105,9 +105,9 @@
                     android:layout_height="match_parent"
                     android:id="@+id/seven"
                     android:textSize="30sp"
-                    android:textStyle="normal|bold"
                     android:layout_weight="25"
-                    android:background="@color/digits"/>
+                    android:background="@color/digits"
+                    android:onClick="number"/>
 
                 <Button
                     android:text="8"
@@ -115,29 +115,29 @@
                     android:layout_height="match_parent"
                     android:id="@+id/eight"
                     android:textSize="30sp"
-                    android:textStyle="normal|bold"
                     android:layout_weight="25"
-                    android:background="@color/digits"/>
+                    android:background="@color/digits"
+                    android:onClick="number"/>
 
                 <Button
                     android:text="9"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:id="@+id/nine"
-                    android:textStyle="normal|bold"
                     android:textSize="30sp"
                     android:layout_weight="25"
-                    android:background="@color/digits"/>
+                    android:background="@color/digits"
+                    android:onClick="number"/>
 
                 <Button
-                    android:text="*"
+                    android:text="×"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:id="@+id/product"
                     android:textSize="30sp"
-                    android:textStyle="normal|bold"
                     android:layout_weight="25"
-                    android:background="@color/operation"/>
+                    android:background="@color/operation"
+                    android:onClick="sign"/>
             </LinearLayout>
 
             <LinearLayout
@@ -151,10 +151,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:id="@+id/four"
-                    android:textStyle="normal|bold"
                     android:textSize="30sp"
                     android:layout_weight="25"
-                    android:background="@color/digits"/>
+                    android:background="@color/digits"
+                    android:onClick="number"/>
 
                 <Button
                     android:text="5"
@@ -162,9 +162,9 @@
                     android:layout_height="match_parent"
                     android:id="@+id/five"
                     android:textSize="30sp"
-                    android:textStyle="normal|bold"
                     android:layout_weight="25"
-                    android:background="@color/digits"/>
+                    android:background="@color/digits"
+                    android:onClick="number" />
 
                 <Button
                     android:text="6"
@@ -172,9 +172,9 @@
                     android:layout_height="match_parent"
                     android:id="@+id/six"
                     android:textSize="30sp"
-                    android:textStyle="normal|bold"
                     android:layout_weight="25"
-                    android:background="@color/digits"/>
+                    android:background="@color/digits"
+                    android:onClick="number"/>
 
                 <Button
                     android:text="-"
@@ -182,9 +182,9 @@
                     android:layout_height="match_parent"
                     android:id="@+id/minus"
                     android:textSize="30sp"
-                    android:textStyle="normal|bold"
                     android:layout_weight="25"
-                    android:background="@color/operation"/>
+                    android:background="@color/operation"
+                    android:onClick="sign"/>
             </LinearLayout>
 
             <LinearLayout
@@ -199,9 +199,9 @@
                     android:layout_height="match_parent"
                     android:id="@+id/one"
                     android:textSize="30sp"
-                    android:textStyle="normal|bold"
                     android:layout_weight="25"
-                    android:background="@color/digits"/>
+                    android:background="@color/digits"
+                    android:onClick="number"/>
 
                 <Button
                     android:text="2"
@@ -209,9 +209,9 @@
                     android:layout_height="match_parent"
                     android:id="@+id/two"
                     android:textSize="30sp"
-                    android:textStyle="normal|bold"
                     android:layout_weight="25"
-                    android:background="@color/digits"/>
+                    android:background="@color/digits"
+                    android:onClick="number"/>
 
                 <Button
                     android:text="3"
@@ -219,9 +219,9 @@
                     android:layout_height="match_parent"
                     android:id="@+id/three"
                     android:textSize="30sp"
-                    android:textStyle="normal|bold"
                     android:layout_weight="25"
-                    android:background="@color/digits"/>
+                    android:background="@color/digits"
+                    android:onClick="number"/>
 
                 <Button
                     android:text="+"
@@ -229,9 +229,9 @@
                     android:layout_height="match_parent"
                     android:id="@+id/plus"
                     android:textSize="30sp"
-                    android:textStyle="normal|bold"
                     android:layout_weight="25"
-                    android:background="@color/operation"/>
+                    android:background="@color/operation"
+                    android:onClick="sign"/>
             </LinearLayout>
 
             <LinearLayout
@@ -248,7 +248,8 @@
                     android:textSize="30sp"
                     android:textStyle="normal|bold"
                     android:layout_weight="0.25"
-                    android:background="@color/otherdown"/>
+                    android:background="@color/otherdown"
+                    android:onClick="point"/>
 
                 <Button
                     android:text="0"
@@ -256,30 +257,30 @@
                     android:layout_height="match_parent"
                     android:id="@+id/zero"
                     android:textSize="30sp"
-                    android:textStyle="normal|bold"
                     android:layout_weight="0.25"
-                    android:background="@color/digits"/>
+                    android:background="@color/digits"
+                    android:onClick="number"/>
 
                 <Button
                     android:text="Del"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:id="@+id/del"
-                    android:textSize="15sp"
-                    android:textStyle="normal|bold"
+                    android:textSize="30sp"
                     android:layout_weight="0.25"
-                    android:background="@color/otherdown"/>
+                    android:background="@color/otherdown"
+                    android:onClick="number" />
 
                 <Button
                     android:text="="
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:id="@+id/equals"
-                    android:textSize="30sp"
-                    android:textStyle="normal|bold"
+                    android:textSize="40sp"
                     android:elevation="0dp"
                     android:layout_weight="0.25"
-                    android:background="@color/operation"/>
+                    android:background="@color/operation"
+                    android:onClick="calculate"/>
 
             </LinearLayout>
 
