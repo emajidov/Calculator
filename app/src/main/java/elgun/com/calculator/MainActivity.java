@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             }
     }
     public void point(View v){
-        String[] a = v1.split("(?<=[-+])|(?=[-+])");
+        String[] a = v1.split("(?<=[-+×÷])|(?=[-+×÷])"); // this pattern has been copied from the StackOverflow. check link below. :)
         if(!a[a.length-1].contains(".")) { v1 += ".";}
         display.setText(v1);
     }
@@ -61,7 +61,8 @@ public class MainActivity extends AppCompatActivity {
             v1 = "";
         }
         catch (Exception e) {
-            Toast.makeText(MainActivity.this, "Please do not do this!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "Invalid Expression! " +
+                    "\nPlease do not do this!", Toast.LENGTH_SHORT).show();
         }
     }
     public void out(View v) {
@@ -69,16 +70,16 @@ public class MainActivity extends AppCompatActivity {
         display.setText(v1);
     }
     public void calculate(View v) {
-       try {
-            double result = calculate(display.getText().toString());
-            display.setText(display.getText() + "\n" + String.valueOf(result));
-            v1 = String.valueOf(result);
-            isResult = true;
-        }
-        catch(Exception e) {
-            Toast.makeText(this.getApplicationContext(),"Please, do not do that!",Toast.LENGTH_SHORT).show();
-            isResult = false;
-        }
+            try {
+                double result = calculate(display.getText().toString());
+                display.setText(display.getText() + "\n" + String.valueOf(result));
+                v1 = String.valueOf(result);
+                isResult = true;
+            } catch (Exception e) {
+                Toast.makeText(this.getApplicationContext(), "Invalid Expression! \n " +
+                        "Please, do not do that!", Toast.LENGTH_SHORT).show();
+                isResult = false;
+            }
     }
 
     public static  double calculate(String ex){

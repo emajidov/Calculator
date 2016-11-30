@@ -30,9 +30,9 @@
                 android:layout_height="match_parent"
                 android:id="@+id/display"
                 android:textSize="30sp"
-                android:textAlignment="textEnd"
                 android:lines="5"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                android:textAlignment="textEnd" />
 
         </LinearLayout>
 
