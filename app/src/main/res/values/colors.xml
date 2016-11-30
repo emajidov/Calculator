@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorAccent">#FF4081</color>
-    <color name="digits">#3aaa63</color>
+    <color name="digits">#39bfba</color>
     <color name="othertop">#e59c00</color>
-    <color name="otherdown">#3aaa63</color>
+    <color name="otherdown">#39bfba</color>
     <color name="operation">#28e0a6</color>
 </resources>

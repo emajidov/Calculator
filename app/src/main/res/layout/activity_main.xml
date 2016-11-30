@@ -6,30 +6,32 @@
     android:layout_height="match_parent"
 
     android:background="#7b8c91"
-    tools:context="elgun.com.calculator.MainActivity">
+    tools:context="elgun.com.calculator.MainActivity"
+    android:orientation="vertical">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_weight="7">
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:baselineAligned="false">
+            android:baselineAligned="false"
+            android:layout_weight="0.001">
 
             <TextView
                 android:background="#ceedd9"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/display"
-                android:textSize="40sp"
+                android:textSize="30sp"
                 android:textAlignment="textEnd"
-                android:layout_weight="1"
-                android:lines="3"
+                android:lines="5"
                 android:textColor="@android:color/background_dark" />
 
         </LinearLayout>
@@ -41,7 +43,8 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
             android:weightSum="1"
-            android:baselineAligned="false">
+            android:baselineAligned="false"
+            android:layout_weight="1">
 
             <LinearLayout
                 android:orientation="horizontal"
