@@ -6,8 +6,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
-
-    TextView display;
+    private TextView display;
     private String v1 = "", operand = "", memory = "";
     private boolean isResult;
     @Override
@@ -36,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void point(View v){
         String[] a = v1.split("(?<=[-+])|(?=[-+])");
-       if(!a[a.length-1].contains("."))v1 += ".";
+        if(!a[a.length-1].contains(".")) { v1 += ".";}
         display.setText(v1);
     }
     public void sign(View v) {
@@ -44,13 +43,14 @@ public class MainActivity extends AppCompatActivity {
         Button button = (Button)v;
         operand = button.getText().toString();
         if(!v1.isEmpty()) {
-            if ((v1.substring(v1.length() - 1, v1.length()).equals("+")) || (v1.substring(v1.length() - 1, v1.length()).equals("-")) ||
-                    (v1.substring(v1.length() - 1, v1.length()).equals("×")) || (v1.substring(v1.length() - 1, v1.length()).equals("÷"))) {
+            if ((v1.substring(v1.length() - 1, v1.length()).equals("+")) ||
+                    (v1.substring(v1.length() - 1, v1.length()).equals("-")) ||
+                    (v1.substring(v1.length() - 1, v1.length()).equals("×")) ||
+                    (v1.substring(v1.length() - 1, v1.length()).equals("÷"))) {
                 v1 = v1.substring(0, v1.length() - 1);
             }
         }
-        if(v1.isEmpty()&&(operand.equals("×")||operand.equals("÷"))) operand = "";
-
+        if(v1.isEmpty()&&(operand.equals("×")||operand.equals("÷"))) {operand = "";}
             v1 += operand;
             display.setText(v1);
     }
@@ -71,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
     public void calculate(View v) {
        try {
             double result = calculate(display.getText().toString());
-
             display.setText(display.getText() + "\n" + String.valueOf(result));
             v1 = String.valueOf(result);
             isResult = true;
@@ -86,8 +85,7 @@ public class MainActivity extends AppCompatActivity {
         double res = 0;
         String[] a = ex.split("(?<=[-+])|(?=[-+])");
         for (int i = 0; i < a.length; i++) {
-            if (a[i].equals(""))
-                a[i] = "0";
+            if (a[i].equals("")){ a[i] = "0";}
             if (a[i].contains("÷") || a[i].contains("×")) {
                 String[] mul = a[i].split("(?<=[×÷])|(?=[×÷])");
                 double r = Double.parseDouble(mul[0]);
